@@ -26,4 +26,8 @@ And, if you actually want to code, you'll want some kind of code editor:
 
 - Visual Studio Code: https://www.youtube.com/watch?v=cu_ykIfBprI&t=33s
 
+And, if you are going to code, you can't go wrong starting with Python:
+
+- Python Getting Started Video Series: https://www.youtube.com/watch?v=jGE4aLSgRDs&list=PL2iGGYc-iqtyVjCXzFCSH1yggyUDOEpSL
+
 ## Now for Some Unix
