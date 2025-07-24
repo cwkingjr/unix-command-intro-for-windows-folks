@@ -31,3 +31,26 @@ And, if you are going to code, you can't go wrong starting with Python:
 - Python Getting Started Video Series: https://www.youtube.com/watch?v=jGE4aLSgRDs&list=PL2iGGYc-iqtyVjCXzFCSH1yggyUDOEpSL
 
 ## Now for Some Unix
+
+For a super quick intro to get you started, please watch this video: https://www.youtube.com/watch?v=sw9kdFka8rA
+
+And even though some of the material is repeated in this video, please watch this one also because you will see some clearer explanations of some of the commands and some new stuff. This video also references using nano, which is a simpler-to-learn for beginners code editor. Nano is available with Git Bash. https://www.youtube.com/watch?v=S0XegNhpTs8&t=17s
+
+That video just above references explainshell.com, which is rather cool and useful: https://explainshell.com/
+
+### Some Background on Unix
+
+Unix was built using a few philosophies: it stores configs and text and such in text files; internally it treats many of its parts as files or file-like items; it has a bunch of commands that “do one thing well”.
+
+When you open a unix terminal, it automatically opens three “file like” (stream) interfaces: standard input (“stdin”), standard output (“stdout”), and standard error (“stderr”). And, it (normally) automatically connects these to hardware devices on your computer.
+https://en.wikipedia.org/wiki/Standard_streams#/media/File:Stdstreams-notitle.svg
+
+### Some Commands
+
+#### alias
+
+#### ls/ll
+
+## Using Git Bash for Git/GitHub
+
+https://www.geeksforgeeks.org/git/working-on-git-bash/
