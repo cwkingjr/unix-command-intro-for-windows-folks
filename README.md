@@ -49,6 +49,10 @@ https://en.wikipedia.org/wiki/Standard_streams#/media/File:Stdstreams-notitle.sv
 
 #### alias
 
+The alias command can be used to configure shortcut commands that basically just call something else. They are typically used to provide an easier way to call a command with options or provide a provide a shorter way to call long command strings. Aliases get loaded in when you open the shell. You can see which aliases are currently loaded by calling the alias command.
+
+![alias example](images/alias.png)
+
 #### ls/ll
 
 ## Using Git Bash for Git/GitHub
