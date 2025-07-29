@@ -82,6 +82,18 @@ When you open a unix terminal, it automatically opens three “file like” (str
 
 https://en.wikipedia.org/wiki/Standard_streams#/media/File:Stdstreams-notitle.svg
 
+#### Redirects and Pipes
+
+“Stdout” and “stderr” are both connected to your display, which seems odd at first, but they do that so that you can send expected data and unexpected data to different places if/when you want.
+
+To make that possible, they have ways of telling unix to redirect those outputs to a different place. Since the tools are built to do one thing, the way you do most things is to pipe the output stream of one tool into the input stream of the next tool. When the terminal/shell sees that a tool/program is in what they call a pipeline, it doesn’t connect the program to your display but sends it into a “pipe” that is like a water pipe where one tool pumps its output into the pipe and the next tool reads its input data from the pipe.
+
+A good thing about pipes is that they can queue up some amount of data so a fast tool doesn’t overload a slower tool downstream. When the entire pipeline ends, the shell closes all the programs and destroys the temporary pipes.
+
+A pipe is represented by a vertical slash “|”. So, this pipeline reads the data from a file and sends it through a pipe into the sort program, which sorts the input data and sends it into a different pipe into a program (head) that grabs the top 5 rows: `cat my_file.txt | sort | head -5`.
+
+The output of head, since it isn’t redirected into a pipe, gets sent to stdout and displayed on your terminal screen. If you wanted to send that instead to a file, you could run this `cat my_file.txt | sort | head -5 > a_new_file.txt`, which would do the same thing, but send the final output stream of text data into a new file in your present working directory (`pwd`). That “>” file redirection symbol always overwrites the file so if there was one already there, you loose it’s contents and get the new contents. If you want to keep the old and new contents, you can use a different redirection symbol for appending data to a file “>>”, like so: `cat my_file.txt | sort | head -5 >> appended_file.txt`.
+
 #### Home Folder
 
 Unix environments use the tilde symbol as a mapping to your home folder. So, instead of having to type out your home folder path, you can just type "~" and the rest of the path you desire. For example, instead of `cat c/users/myusername/dev/myfile.txt` you can type `cat ~/dev/myfile.txt`.
