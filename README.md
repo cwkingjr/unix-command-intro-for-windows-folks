@@ -164,6 +164,10 @@ For example, here's how to use awk to consolidate a bunch of CSV files with head
 
 ![awk](images/awk-instructions.png)
 
+Here's an example of the use of the awk command shown above.
+
+![awk example](images/awk-to-consolidate-csv-files-named-fileX.csv.png)
+
 #### ls/ll
 
 These were covered in the videos you were supposed to watch, but as a reminder, you can list the files and directories in a folder using the ls command or any aliases that are set up. By default, ls gives a short listing but you can give it options to change how it works.
