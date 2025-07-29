@@ -82,6 +82,14 @@ When you open a unix terminal, it automatically opens three “file like” (str
 
 https://en.wikipedia.org/wiki/Standard_streams#/media/File:Stdstreams-notitle.svg
 
+#### Programs vs Commands vs Arguments
+
+Unix uses lots of programs. These are typically compiled software that is invoked at the shell command line. However, the shell also has a bunch of built in commands. The shell takes care of finding the command when you run it on the shell terminal. If the command is not a built-in command, the shell will look in your execution path to see if it can find the program that you called. If it doesn't, it'll complain that you provided an unknown program (command not found). If it does, it'll invoke the program and pass it the arguments you provided on the shell.
+
+So, for example, when you type `head -5 ./myfile.txt`, the shell will invoke the head program and pass it the "-5 ./myfile.txt" arguments. Head must be programmed with code that will process the arguments and determine how to use them. You can figure out what head wants for arguments by running `head --help`. Most Unix programs will accept either a `-h` or `--help` argument to get it to print out its help info to the display.
+
+By the way, you actually might have a program that installed that the shell can't find because the program was installed somewhere that is not listed in the directories listed in your path.
+
 #### Redirects and Pipes
 
 “Stdout” and “stderr” are both connected to your display, which seems odd at first, but they do that so that you can send expected data and unexpected data to different places if/when you want.
@@ -110,6 +118,24 @@ Unix shells keep a short history of commands you employ to make it easier to reu
 
 The history info is normally stored in a hidden file called .bash_history.
 
+#### Environment Variables
+
+Unix commands often take advantage of environment variables. These are variables that get set a variety of ways but get presented to the shell when it runs. You can see what environment variables are set for your shell by running the `env` command.
+
+![env command](images/env-command.png)
+
+If you only want to see the value of a particular environment variable, you can grab just that one by prefixing it with a dollar sign and calling it with `echo`, for example `echo $SHELL`.
+
+![echo shell](images/echo-shell.png)
+
+Perhaps one you will actually use sometimes is: `echo $PATH`.
+
+![echo path](images/echo-path.png)
+
+#### Path
+
+Unix finds programs by searching in the directories listed in your PATH environment variable. The path is a list of directories separated by a colon. Unix will look for the program in each directory, and here's the important part, starting at the first directory and keeping going until it finds the program or not. So, if you have a copy of (possibly different versions) a program in the first path directory and another copy in the last path directory, the shell will use the one in the first directory. Or, said another way, it'll use the first one it finds.
+
 ### Some Commands
 
 #### alias
@@ -125,3 +151,13 @@ By the way, I'm not sure how Git Bash on Windows is including those aliases that
 Tip: You can use custom aliases to save yourself a lot of typing. For example, let's say you work in a specific folder a lot and are tired of typing cd blah blah. You could create yourself a custom alias and then just use that by adding this line to .bashrc `alias mar="cd ~/dev/marimotest/;git pull"`. Then, you can restart the terminal and just type mar return and whalaa! That alias above changes to the marimotest directory and then invokes the git pull command (that dir is a git repo) and pulls down any new files automatically, so you are always working with the current repo files without worrying about forgetting to do a git pull. Don't worry about this if you are not using git. Some folks have 10-20 custom aliases they always set up on a new system.
 
 #### ls/ll
+
+These were covered in the videos you were supposed to watch, but as a reminder, you can list the files and directories in a folder using the ls command or any aliases that are set up. By default, ls gives a short listing but you can give it options to change how it works.
+
+![ls command](images/ls-command.png)
+
+#### which
+
+You can use the which command to find out where a program is installed, or, if there are more than one copies of it, which one will get executed. Sometimes a different version that what you expected with get executed because it came first in the list of directories listed in your path.
+
+![which](images/which-command.png)
