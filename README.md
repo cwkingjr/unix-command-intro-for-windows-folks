@@ -168,6 +168,8 @@ Here's an example of the use of the awk command shown above.
 
 ![awk example](images/awk-to-consolidate-csv-files-named-fileX.csv.png)
 
+And the command in case you want to copy/paste it: `awk '(NR == 1) || (FNR > 1)' file*.csv > combined.csv`.
+
 #### ls/ll
 
 These were covered in the videos you were supposed to watch, but as a reminder, you can list the files and directories in a folder using the ls command or any aliases that are set up. By default, ls gives a short listing but you can give it options to change how it works.
