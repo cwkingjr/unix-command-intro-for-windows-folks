@@ -110,6 +110,6 @@ If you want to add an alias that will show a long listing that includes hidden f
 
 By the way, I'm not sure how Git Bash on Windows is including those aliases that come with the terminal as they are not in .bashrc. So, just add what you want as custom aliases to .bashrc.
 
-Tip: You can use custom aliases to save yourself a lot of typing. For example, let's say you work in a specific folder a lot and are tired of typing cd blah blah. You could create yourself a custom alias and then just use that by adding this line to .bashrc `alias cdmar="cd ~/dev/marimotest/"`. Then, you can restart the terminal and just type cdmar return and whalaa! Some folks have 10-20 custom aliases they always set up on a new system.
+Tip: You can use custom aliases to save yourself a lot of typing. For example, let's say you work in a specific folder a lot and are tired of typing cd blah blah. You could create yourself a custom alias and then just use that by adding this line to .bashrc `alias mar="cd ~/dev/marimotest/;git pull"`. Then, you can restart the terminal and just type mar return and whalaa! That alias above changes to the marimotest directory and then invokes the git pull command (that dir is a git repo) and pulls down any new files automatically, so you are always working with the current repo files without worrying about forgetting to do a git pull. Don't worry about this if you are not using git. Some folks have 10-20 custom aliases they always set up on a new system.
 
 #### ls/ll
