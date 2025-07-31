@@ -191,7 +191,10 @@ less ./somelong.csv
 Here's a good intro video on using less: https://www.youtube.com/watch?v=06GsFVeuWNk&t=175s
 
 Most used navigation keys:
-![less navigation ](images/less-navigation.png)
+
+<p align="center">
+<img src="images/less-navigation.png" width="300" />
+</p>
 
 #### ls/ll
 
