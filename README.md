@@ -110,7 +110,7 @@ Unix environments use the tilde symbol as a mapping to your home folder. So, ins
 
 Unix shells normally offer command line tab completion. This means you can start typing what you want and hit the tab key and if the shell can figure out what you are trying to do, it will finish filling in the command. This is most often used with directory and file names. So, if you are trying to type in a long file name, you can start the name and then hit tab and if there are no conflicting file names, the tab completion with fill in the rest of the name. Typically, if there is a name conflict, the shell will show you the conflicting names and you can type one/more additional characters as needed to identify the desired name.
 
-![Tab Completion Example](images/bash-shell-tab-completions.png)
+<p align="center"><img src="images/bash-shell-tab-completions.png" width="400" /></p>
 
 #### History
 
@@ -122,15 +122,15 @@ The history info is normally stored in a hidden file called .bash_history.
 
 Unix commands often take advantage of environment variables. These are variables that get set a variety of ways but get presented to the shell when it runs. You can see what environment variables are set for your shell by running the `env` command.
 
-![env command](images/env-command.png)
+<p align="center"><img src="images/env-command.png" width="400" /></p>
 
 If you only want to see the value of a particular environment variable, you can grab just that one by prefixing it with a dollar sign and calling it with `echo`, for example `echo $SHELL`.
 
-![echo shell](images/echo-shell.png)
+<p align="center"><img src="images/echo-shell.png" width="400" /></p>
 
 Perhaps one you will actually use sometimes is: `echo $PATH`.
 
-![echo path](images/echo-path.png)
+<p align="center"><img src="images/echo-path.png" width="400" /></p>
 
 #### Path
 
@@ -140,7 +140,7 @@ Unix finds programs by searching in the directories listed in your PATH environm
 
 Unix allows you to use wildcard patterns to match multiple files, letters, etc. Here are the common patterns.
 
-![glob](images/glob-patterns.png)
+<p align="center"><img src="images/glob-patterns.png" width="400" /></p>
 
 ### Some Commands
 
@@ -148,7 +148,7 @@ Unix allows you to use wildcard patterns to match multiple files, letters, etc. 
 
 The alias command can be used to configure shortcut commands that basically just call something else. They are typically used to provide an easier way to call a command with options or provide a provide a shorter way to call long command strings. Aliases get loaded in when you open the shell. You can see which aliases are currently loaded by calling the alias command.
 
-![alias example](images/alias.png)
+<p align="center"><img src="images/alias.png" width="400" /></p>
 
 If you want to add an alias that will show a long listing that includes hidden files, you can run this command on the terminal `echo 'alias lla="ls -al"' >> ~/.bashrc`. This will append the line to your config file, but you will need to restart your terminal for it to become active (cause the terminal to reread the configs). If that scares you, you can add `alias lla="ls -al"` as a new line to .bashrc using nano.
 
@@ -162,11 +162,11 @@ You can do some wild and crazy text processing using the awk command. However, a
 
 For example, here's how to use awk to consolidate a bunch of CSV files with headers into one file with a quick and simple awk run.
 
-![awk](images/awk-instructions.png)
+<p align="center"><img src="images/awk-instructions.png" width="400" /></p>
 
 Here's an example of the use of the awk command shown above.
 
-![awk example](images/awk-to-consolidate-csv-files-named-fileX.csv.png)
+<p align="center"><img src="images/awk-to-consolidate-csv-files-named-fileX.csv.png" width="400" /></p>
 
 And the command in case you want to copy/paste it: `awk '(NR == 1) || (FNR > 1)' file*.csv > combined.csv`.
 
@@ -192,18 +192,16 @@ Here's a good intro video on using less: https://www.youtube.com/watch?v=06GsFVe
 
 Most used navigation keys:
 
-<p align="center">
-<img src="images/less-navigation.png" width="300" />
-</p>
+<p align="center"><img src="images/less-navigation.png" width="400" /></p>
 
 #### ls/ll
 
 These were covered in the videos you were supposed to watch, but as a reminder, you can list the files and directories in a folder using the ls command or any aliases that are set up. By default, ls gives a short listing but you can give it options to change how it works.
 
-![ls command](images/ls-command.png)
+<p align="center"><img src="images/ls-command.png" width="400" /></p>
 
 #### which
 
 You can use the which command to find out where a program is installed, or, if there are more than one copies of it, which one will get executed. Sometimes a different version that what you expected with get executed because it came first in the list of directories listed in your path.
 
-![which](images/which-command.png)
+<p align="center"><img src="images/which-command.png" width="400" /></p>
