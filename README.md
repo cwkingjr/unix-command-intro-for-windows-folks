@@ -170,6 +170,29 @@ Here's an example of the use of the awk command shown above.
 
 And the command in case you want to copy/paste it: `awk '(NR == 1) || (FNR > 1)' file*.csv > combined.csv`.
 
+#### less
+
+Unix offers several choices of programs you can use as a pager, which is a program to page through the contents of a large file. Without a pager, the contents of a large file will just blow through the terminal and you will only be able to see the last part of the content. The pager I recommend is `less`.
+
+You can use `less` to load text files directly, or you can pipe the contents from some other command into it.
+
+For example:
+
+```
+cat ./somelong.csv | sort | less
+```
+
+Or:
+
+```
+less ./somelong.csv
+```
+
+Here's a good intro video on using less: https://www.youtube.com/watch?v=06GsFVeuWNk&t=175s
+
+Most used navigation keys:
+![less navigation ](images/less-navigation.png)
+
 #### ls/ll
 
 These were covered in the videos you were supposed to watch, but as a reminder, you can list the files and directories in a folder using the ls command or any aliases that are set up. By default, ls gives a short listing but you can give it options to change how it works.
